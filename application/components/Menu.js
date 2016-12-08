@@ -116,42 +116,51 @@ class Menu extends React.Component {
           <ChainBlender />
         </div>
 
+        <IndexLink to='/' activeStyle={{color:'#B71C1C'}} >
         <MenuItem
           value={1}
           onTouchTap={this.toggleMenu}
-          containerElement={<IndexLink to='/' activeStyle={{color:'#B71C1C'}} />}
           primaryText='Transactions'
           leftIcon={<TransactionsIcon />}
         />
-        <MenuItem
-          value={2}
-          onTouchTap={this.toggleMenu}
-          containerElement={<Link to='addressBook' activeStyle={{color:'#B71C1C'}} />}
-          primaryText='Address book'
-          leftIcon={<AddressBookIcon />}
-        />
-        <MenuItem
-          value={3}
-          onTouchTap={this.toggleMenu}
-          containerElement={<Link to='contacts' activeStyle={{color:'#B71C1C'}} />}
-          primaryText='Contacts'
-          leftIcon={<ContactsIcon />}
-          disabled={true}
-        />
-        <MenuItem
-          value={4}
-          onTouchTap={this.toggleMenu}
-          containerElement={<Link to='network' activeStyle={{color:'#B71C1C'}} />}
-          primaryText='Network'
-          leftIcon={<NetworkIcon />}
-        />
-        <MenuItem
-          value={5}
-          onTouchTap={this.toggleMenu}
-          containerElement={<Link to='maintenance' activeStyle={{color:'#B71C1C'}} />}
-          primaryText='Maintenance'
-          leftIcon={<MaintenanceIcon />}
-        />
+        </IndexLink>
+
+        <Link to='addressBook' activeStyle={{color:'#B71C1C'}} >
+          <MenuItem
+            value={2}
+            onTouchTap={this.toggleMenu}
+            primaryText='Address book'
+            leftIcon={<AddressBookIcon />}
+          />
+        </Link>
+
+        <Link to='contacts' activeStyle={{color:'#B71C1C'}} >
+          <MenuItem
+            value={3}
+            onTouchTap={this.toggleMenu}
+            primaryText='Contacts'
+            leftIcon={<ContactsIcon />}
+            disabled={true}
+          />
+        </Link>
+
+        <Link to='network' activeStyle={{color:'#B71C1C'}} >
+          <MenuItem
+            value={4}
+            onTouchTap={this.toggleMenu}
+            primaryText='Network'
+            leftIcon={<NetworkIcon />}
+          />
+        </Link>
+
+        <Link to='maintenance' activeStyle={{color:'#B71C1C'}} >
+          <MenuItem
+            value={5}
+            onTouchTap={this.toggleMenu}
+            primaryText='Maintenance'
+            leftIcon={<MaintenanceIcon />}
+          />
+        </Link>
       </Drawer>
     )
   }
